@@ -4,7 +4,7 @@ import SearchBar from "../components/SearchBar";
 
 const Home = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Header />
       <SearchBar />
     </View>
@@ -13,4 +13,8 @@ const Home = () => {
 
 export default Home;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    padding: 15,
+  },
+});

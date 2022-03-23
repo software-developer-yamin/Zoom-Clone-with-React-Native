@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 const SearchBar = () => {
   return (
     <View>
-      <Text>SearchBar</Text>
+      <Ionicons name="ios-search-sharp" size={24} color="black" />
     </View>
   );
 };

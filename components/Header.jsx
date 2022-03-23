@@ -1,14 +1,34 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Entypo } from "@expo/vector-icons";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
 
 const Header = () => {
   return (
-    <View>
-      <Text>Header</Text>
+    <View style={styles.container}>
+      <TouchableOpacity>
+        <Entypo name="notification" size={30} color="#efefef" />
+      </TouchableOpacity>
+      <Text style={styles.heading}>Meet & Chat</Text>
+      <TouchableOpacity>
+        <Entypo name="new-message" size={30} color="#efefef" />
+      </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+  },
+  heading: {
+    color: "#efefef",
+    fontSize: 20,
+    fontWeight: "700",
+  },
+});
