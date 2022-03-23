@@ -1,9 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import Header from "../components/Header";
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Header />
+      <SearchBar />
     </View>
   );
 };
