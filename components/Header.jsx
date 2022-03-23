@@ -1,7 +1,6 @@
 import { Entypo } from "@expo/vector-icons";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-
 const Header = () => {
   return (
     <View style={styles.container}>
