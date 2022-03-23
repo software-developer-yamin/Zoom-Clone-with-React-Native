@@ -29,15 +29,13 @@ const items = [
 const MenuButtons = () => {
   const navigation = useNavigation();
 
-  const openMeeting = () => navigation.navigate("Room");
-
   return (
     <View style={styles.container}>
       {/* One Menu Button*/}
       {items.map((item) => (
         <View style={styles.buttonContainer} key={item.id}>
           <TouchableOpacity
-            onPress={openMeeting}
+            onPress={() => item.customColor && navigation.navigate("Room")}
             style={{
               ...styles.button,
               backgroundColor: item.customColor ? item.customColor : "#0470dc",

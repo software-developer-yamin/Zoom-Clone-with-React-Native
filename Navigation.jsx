@@ -9,7 +9,8 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        screenOptions={{ headerShown: false}}
+        screenOptions={{ headerShown: false }}
+        initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Room" component={MeetingRoom} />
