@@ -8,15 +8,21 @@ let socket;
 const MeetingRoom = () => {
   const [name, setName] = useState();
   const [roomId, setRoomId] = useState();
+  const [activeUsers, setActiveUsers] = useState();
 
   const joinRoom = () => {
     socket.emit("join-room", { roomId: roomId, userName: name });
   };
 
   useEffect(() => {
-    socket = io("http://d215-103-151-104-176.ngrok.io");
+    socket = io("http://7e18-103-151-104-176.ngrok.io");
     console.log("YOOOOOOO");
     socket.on("connection", () => console.log("connection established"));
+    socket.on("all-users", (users) => {
+      console.log("Active Users");
+      console.log(users);
+      setActiveUsers(users);
+    });
   }, []);
 
   return (
