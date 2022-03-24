@@ -1,6 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -9,11 +8,9 @@ import {
   View,
 } from "react-native";
 
-const StartMeeting = () => {
+const StartMeeting = ({ name, setName, setRoomId, roomId, joinRoom }) => {
   const navigation = useNavigation();
 
-  const [name, setName] = useState(null);
-  const [roomId, setRoomId] = useState(null);
   return (
     <View>
       <View style={styles.headerContainer}>
@@ -45,7 +42,10 @@ const StartMeeting = () => {
           />
         </View>
         <View style={{ alignItems: "center" }}>
-          <TouchableOpacity style={styles.startMeetingButtons}>
+          <TouchableOpacity
+            style={styles.startMeetingButtons}
+            onPress={() => joinRoom()}
+          >
             <Text style={{ fontWeight: "bold", color: "white" }}>
               Start Meeting
             </Text>

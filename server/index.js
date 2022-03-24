@@ -16,6 +16,10 @@ io.on('connection', (socket) => {
      });
 });
 
+app.get("/", (req, res) => {
+     res.json("Hi, Yamin And Hello world!");
+})
+
 server.listen(port, () => {
      console.log(`Server is up on port ${port}!`)
 });
