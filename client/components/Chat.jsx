@@ -34,7 +34,9 @@ const Chat = ({ setModalVisible, modalVisible }) => {
                 <Entypo name="bell" size={25} color="#efefef" />
               </View>
               {/* Chat Messages */}
-              <View style={styles.chatMessages}></View>
+              <View style={styles.chatMessages}>
+                <Text>{messageText}</Text>
+              </View>
               {/* Type Messages */}
               <View style={styles.chatFormContainer}>
                 <Text style={{ color: "white" }}>Send to: Everyone</Text>
