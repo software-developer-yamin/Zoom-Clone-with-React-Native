@@ -58,7 +58,7 @@ const MeetingRoom = () => {
   };
 
   useEffect(() => {
-    socket = io("https://39fd-103-151-104-176.ngrok.io");
+    socket = io("https://zoom-clone-with-react-native-backend.onrender.com");
     socket.on("connection", () => console.log("connection established"));
     socket.on("all-users", (users) => {
       setActiveUsers(users);
